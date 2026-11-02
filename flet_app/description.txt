@@ -1,0 +1,26 @@
+# 💱 ExchangeEasy - Smart Currency Assistant
+
+A lightweight, modern cross-platform desktop currency converter built with Python and CustomTkinter, featuring secure user authentication, local SQLite history tracking, and support for 20 global currencies.
+
+## ✨ Key Features
+* **Secure User Authentication**: Complete registration and login system utilizing SHA-256 password hashing.
+* **20 Global Currencies**: Instant conversion lookup covering major world currencies complete with symbols.
+* **Dual Rate Modes**: Choose between pre-loaded default international exchange rates or enter custom user-defined rates.
+* **Persistent History Tracking**: Automatically saves user conversion records into a local SQLite database (`casheasy.db`).
+* **Modern UI**: Styled with **CustomTkinter** for clean light/dark system-matched aesthetics.
+
+## 🛠️ Tech Stack
+* **Language**: Python 3.15
+* **GUI Framework**: CustomTkinter
+* **Database & Security**: SQLite3, Hashlib (SHA-256)
+
+---
+
+## 🚀 Setup and Installation Guide
+
+Follow these steps to run the project locally on your machine:
+
+* **Clone or Download** this project repository to your local computer drive.
+* **Open your terminal** (PowerShell or Command Prompt) and navigate to the project directory:
+  ```powershell
+  cd path\to\your\currency_converter\flet_app

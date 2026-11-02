@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rates - Global Exchange Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" style="height: 40px;">
+                <h2>Exchange Rates</h2>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}">Converter</a>
+                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            </div>
+        </header>
+
+        <div class="converter-box" style="max-width: 100%;">
+            <h2>Live Rates Table</h2>
+            <p style="color: #8da2be; margin-bottom: 20px; font-size: 0.85rem;">
+                All rates are pegged relative to 1 United States Dollar (USD).
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table class="rates-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Currency Name</th>
+                            <th>Symbol</th>
+                            <th>Rate (vs USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for code, details in currency_rates.items() %}
+                        <tr>
+                            <td style="font-weight: bold; color: #ffffff;">{{ code }}</td>
+                            <td style="color: #e0e6ed;">{{ details.name }}</td>
+                            <td style="color: #8da2be;">{{ details.symbol }}</td>
+                            <td style="color: #51cf66; font-weight: 600;">{{ details.rate }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

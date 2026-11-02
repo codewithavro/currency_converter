@@ -1,0 +1,21 @@
+Country / currency	ISO code	Symbol
+United States Dollar	USD	$
+Bangladeshi Taka	BDT	৳
+Euro	EUR	€
+British Pound	GBP	£
+Japanese Yen	JPY	¥
+Indian Rupee	INR	₹
+Pakistani Rupee	PKR	₨
+Chinese Yuan	CNY	元 / ¥
+Russian Ruble	RUB	₽
+Turkish Lira	TRY	₺
+South Korean Won	KRW	₩
+Thai Baht	THB	฿
+Vietnamese Dong	VND	₫
+Nigerian Naira	NGN	₦
+Brazilian Real	BRL	R$
+Swiss Franc	CHF	CHF
+Saudi Riyal	SAR	ر.س
+United Arab Emirates Dirham	AED	د.إ
+South African Rand	ZAR	R
+Mexican Peso	MXN	MX$

@@ -1,0 +1,229 @@
+/* --- Global Dark Tech Theme --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #080d1a;
+    background-image: 
+        radial-gradient(circle at 50% 30%, rgba(14, 40, 70, 0.8) 0%, rgba(8, 13, 26, 0.95) 70%),
+        linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+    color: #e0e6ed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-wrapper, .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+}
+
+.dashboard-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.dashboard-container header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- Hero Graphic Banner --- */
+.hero-section {
+    text-align: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.hero-graphic, .site-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.25));
+}
+
+/* --- Dark Glass Cards --- */
+.auth-card, .auth-container, .converter-box {
+    background: rgba(13, 22, 41, 0.85);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 12px;
+    padding: 35px 40px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(0, 210, 255, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.brand-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.brand-header h2, .converter-box h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    margin-bottom: 5px;
+}
+
+.brand-header p {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #5d7b9d;
+    margin-top: 4px;
+}
+
+/* --- Form Inputs & Controls --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #8da2be;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(6, 12, 24, 0.8);
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #00d2ff;
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
+}
+
+/* --- Action Buttons --- */
+.btn-primary, .btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover, .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(67, 100, 247, 0.4);
+}
+
+/* --- Results Box --- */
+.result-box {
+    margin-top: 25px;
+    padding: 15px;
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    color: #00d2ff;
+}
+
+/* --- Rates Table Styling --- */
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.rates-table th {
+    padding: 14px;
+    border-bottom: 2px solid rgba(0, 210, 255, 0.3);
+    color: #00d2ff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rates-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+.rates-table tr:hover {
+    background: rgba(0, 210, 255, 0.03);
+}
+
+/* --- Alerts & Footers --- */
+.alert {
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.alert.danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid rgba(220, 53, 69, 0.5);
+    color: #ff6b6b;
+}
+
+.alert.success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border: 1px solid rgba(40, 167, 69, 0.5);
+    color: #51cf66;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #5d7b9d;
+}
+
+.auth-footer a, .dashboard-container a {
+    color: #00d2ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.auth-footer a:hover, .dashboard-container a:hover {
+    text-decoration: underline;
+}
+
+.logout-btn {
+    color: #ff6b6b !important;
+    font-weight: 600;
+}

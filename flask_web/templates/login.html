@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Global Exchange Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="hero-section">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Global Exchange Pro Logo" class="hero-graphic">
+        </div>
+
+        <div class="auth-card">
+            <div class="brand-header">
+                <h2>Global Exchange Pro</h2>
+                <p>Advanced Currency Intelligence</p>
+            </div>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="{{ url_for('login') }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="{{ url_for('signup') }}">Signup here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
